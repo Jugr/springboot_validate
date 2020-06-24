@@ -12,7 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 public class Teacher {
 
-    @NotNull( groups = {GroupA.class}, message = "id cannot be null")
+    @NotNull( groups = {Update.class}, message = "id cannot be null")
     private Integer id;
     @NotNull(message = "teacher's name cannot be null")
     private String name;

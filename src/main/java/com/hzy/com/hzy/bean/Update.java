@@ -1,4 +1,4 @@
 package com.hzy.com.hzy.bean;
 
-public interface GroupA {
+public interface Update {
 }

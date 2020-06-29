@@ -19,5 +19,4 @@ public class Teacher {
     @Valid
     @NotNull
     private List<UserInfo> userInfoList;
-
 }

@@ -7,10 +7,7 @@ import com.hzy.com.hzy.bean.UserInfo;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import javax.validation.ValidationException;
@@ -83,6 +80,7 @@ public class PingController {
 
 
     @PostMapping("/teacherUpdate")//user id不能为空
+    // {Update.class, Default.class}有Update.class就要带上Default.class，否则会覆盖掉Default.class*********************
     public String teacherUpdate(@Validated(value = {Update.class, Default.class}) @RequestBody Teacher teacher, BindingResult br){
         StringBuilder sb = new StringBuilder();
         if (br.hasErrors()) {
@@ -97,5 +95,4 @@ public class PingController {
         return sb.toString();
 
     }
-
 }
